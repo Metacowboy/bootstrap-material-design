@@ -1,9 +1,3 @@
-include:
-  - .nojekyll
-
-sass:
-    sass_dir: sass
-
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
@@ -15,56 +9,51 @@ kramdown:
 permalink:        pretty
 
 # Server
-source:           docs
-destination:      _gh_pages
-host:             0.0.0.0
-port:             9000
+source:           .
+destination:      ./_gh_pages
+port:             9001
+baseurl:          "/bootstrap-material-design"
+url:              https://fezvrasta.github.io
 encoding:         UTF-8
-exclude:          [assets/scss/]
+exclude:          [.git, .github, assets/scss/, build, js, node_modules, nuget, scss, vendor, bower.json, composer.json, Gemfile, Gemfile.lock, Gruntfile.js, package.js, package.json, package-lock.json, sache.json]
 
-gems:
+plugins:
   - jekyll-redirect-from
-  - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-toc
 
-# Site vars
-#url:    "http://fezvrasta.github.io"
-repo:   https://github.com/FezVrasta/bootstrap-material-design
-#baseurl: "/bootstrap-material-design"
-url: "http://rosskevin.github.io"
+# Social
+title: Bootstrap Material Design
+description: The most popular HTML, CSS, and JS Material Design library in the world.
+twitter: FezVrasta
+authors: Federico Zivolo and Bootstrap contributors
+social_logo_path: /assets/brand/bootstrap-social-logo.png
+social_image_path: /assets/brand/bootstrap-social.png
 
-# other variables generated in
+# Custom vars
+current_version:  4.1.1
+docs_version:     4.0
+repo:             https://github.com/FezVrasta/bootstrap-material-design
+spectrum:         https://spectrum.chat/bootstrap-md
 
-mkp:               http://www.creative-tim.com/product/material-kit-pro?affiliate_id=87385
-#blog:             http://blog.getbootstrap.com
-#expo:             http://expo.getbootstrap.com
-#themes:           http://themes.getbootstrap.com
+download:
+  source:         https://github.com/FezVrasta/bootstrap-material-design/releases
+  dist:           https://github.com/FezVrasta/bootstrap-material-design/archive/v4.1.1.zip
 
-#
+blog:             https://blog.getbootstrap.com
+expo:             https://expo.getbootstrap.com
+mkp:              https://www.creative-tim.com/product/material-kit-pro?affiliate_id=87385
+mdp:              https://www.creative-tim.com/product/material-dashboard-pro?affiliate_id=87385
+mdbootstrap:      https://mdbootstrap.com/product/material-design-for-bootstrap-pro/?utm_source=7e4bff&utm_id=7e4bff
+
 cdn:
-#  # See https://www.srihash.org for info on how to generate the hashes
-  css:            https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css
-#  css_hash:       "sha384-XXXXXXXX"
-  js:             https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.iife.min.js
-#  js_hash:        "sha384-XXXXXXXX"
-
-  # fonts
-  font_roboto:    https://fonts.googleapis.com/css?family=Roboto:300,400,500,700
-  font_icons:     https://fonts.googleapis.com/icon?family=Material+Icons
-
-  # VERSION is substituted in variables.rb and these are made available as site.data.cdn.*
-  jquery:         https://code.jquery.com/jquery-VERSION.min.js
-  bootstrap:      https://cdn.rawgit.com/twbs/bootstrap/VERSION/dist/js/bootstrap.min.js
-  tether:         https://cdn.rawgit.com/HubSpot/tether/vVERSION/dist/js/tether.min.js
+  # See https://www.srihash.org for info on how to generate the hashes
+  css:            https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css
+  css_hash:       "sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I"
+  js:             https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js
+  js_hash:        "sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe"
+  jquery:         https://code.jquery.com/jquery-3.2.1.slim.min.js
+  jquery_hash:    "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  popper:         https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js
+  popper_hash:    "sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
   snackbar:       https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js
-
-  'ie10-viewport-bug-workaround': https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js
-
-
-#twitter:
-#  username: getbootstrap
-#
-#social:
-#  type: organization
-#  name: twbs
-#  links: ["https://www.facebook.com/getbootstrap/", "https://twitter.com/getbootstrap"]
